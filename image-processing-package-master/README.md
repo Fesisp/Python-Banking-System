@@ -1,11 +1,10 @@
-# package_name
+# Processamento de imagens por IA
 
 Description. 
 Este foi o limite do projeto, nao pude fazer da forma que desejava pois ocorreu problemas ao utilizar o API para fazer a publicação dos pacotes
-E nem as IAs foram capazes de resolver, se eu tivesse mais tempo teria caprichado especialmente igual os outros projetos.
+Mas o resultado final ainda está de acordo com o a ideia do projeto
 
-
-## Installation
+## Instalação
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
 
@@ -13,15 +12,15 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package
 pip install package_name
 ```
 
-## Usage
+## Utilização
 
 ```python
 from package_name.module1_name import file1_name
 file1_name.my_function()
 ```
 
-## Author
+## Autor
 Felipe da Silva Spinola
 
-## License
+## Licensa
 [MIT](https://choosealicense.com/licenses/mit/)
