@@ -1,0 +1,2 @@
+# Este projeto não possui dependências externas.
+# Executa apenas com a biblioteca padrão do Python 3.
