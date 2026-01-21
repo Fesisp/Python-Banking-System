@@ -1,51 +1,62 @@
-# Desafio Bancário em Python (DIO / Suzano)
+# Banking System with OOP & SQLite 🏦
 
-Este projeto implementa um sistema bancário simples em Python, desenvolvido como parte do desafio da plataforma DIO (Digital Innovation One) em parceria com a Suzano. O objetivo é aplicar conceitos de Programação Orientada a Objetos (POO) e lógica de programação.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Status](https://img.shields.io/badge/Status-Completed-success)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📋 Funcionalidades
+> A robust console-based banking application that demonstrates the practical application of **Object-Oriented Programming (OOP)** and **SQL Database Persistence**.
 
-O sistema oferece as seguintes operações bancárias:
+## 📋 Project Overview
 
-*   **Gerenciar Clientes**:
-    *   Cadastrar novos clientes (Pessoa Física).
-    *   Vincular contas a clientes.
-*   **Gerenciar Contas**:
-    *   Criar novas contas correntes.
-    *   Listar contas existentes.
-*   **Operações Financeiras**:
-    *   **Depósito**: Adicionar fundos à conta.
-    *   **Saque**: Retirar fundos (respeitando saldo, limite de valor e limite de saques diários).
-    *   **Extrato**: Visualizar histórico de movimentações.
+This project was developed to simulate core banking operations in a secure and structured environment. Unlike simple scripts, this system implements a full user lifecycle (Registration -> Login -> Transaction) and persists all data to a local **SQLite database**, ensuring that records are maintained even after the application closes.
 
-## 🛠️ Tecnologias Utilizadas
+It serves as a reference implementation for:
+* **Class-based Architecture** (User, Account, Transaction classes).
+* **Database Management** using raw SQL queries within Python.
+* **Secure Authentication** logic.
 
-*   **Python 3**: Linguagem principal.
-*   **Datetime**: Manipulação de datas e horas.
-*   **ABC (Abstract Base Classes)**: Implementação de classes abstratas e interfaces.
+## ✨ Key Features
 
-## 🚀 Como Executar
+* **🔐 User Authentication:** Secure Login and Registration system preventing unauthorized access.
+* **💸 Core Transactions:** Perform Deposits, Withdrawals, and Transfers between accounts.
+* **📜 Statement History:** View detailed transaction logs retrieved directly from the database.
+* **💾 Data Persistence:** Automatic saving of users and balances using `sqlite3`.
+* **🛡️ Error Handling:** Validations for insufficient funds, negative values, and invalid user inputs.
 
-1.  Certifique-se de ter o Python 3 instalado.
-2.  Clone este repositório.
-3.  Execute o arquivo principal:
+## 🛠️ Tech Stack
 
-```bash
-python main.py
-```
+* **Language:** Python 3.x
+* **Database:** SQLite3 (Standard Library)
+* **Paradigm:** Object-Oriented Programming (OOP)
 
-## 📂 Estrutura do Projeto
+## 🚀 How to Run
 
-*   `main.py`: Contém todo o código fonte do sistema (Classes de Domínio e Interface de Console).
-*   `README.md`: Documentação do projeto.
-*   `requirements.txt`: Lista de dependências (Nenhuma externa necessária).
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Fesisp/python-banking-system.git](https://github.com/Fesisp/python-banking-system.git)
+    cd python-banking-system
+    ```
 
-## 📜 Histórico de Versões
+2.  **Run the application:**
+    ```bash
+    python main.py
+    ```
+    *(The database file `fesisbank_users.db` will be created/connected automatically)*.
 
-*   **Versão 1**: Estrutura inicial e operações básicas.
-*   **Versão 2**: Melhorias na lógica e novas validações.
-*   **Versão 3**: Versão completa com funcionalidades extras para personalização.
-*   **Versão 4 (Atual)**: Refatoração para atender estritamente ao modelo UML proposto no desafio.
+3.  **Follow the on-screen menu:**
+    * Select **[1]** to Register a new user.
+    * Select **[2]** to Login and access banking features.
 
+## 📂 Project Structure
+
+```text
+python-banking-system/
+├── main.py              # Application entry point and logic
+├── fesisbank_users.db   # SQLite Database file (Auto-generated)
+├── requirements.txt     # Project dependencies
+└── README.md            # Project documentation
 ## 👤 Autor
 
+Felipe da Silva Spinola
 Projeto desenvolvido por [Fesisp](https://github.com/Fesisp).
