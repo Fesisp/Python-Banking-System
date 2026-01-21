@@ -1,3 +1,10 @@
+"""
+Sistema Bancário - Desafio DIO
+Este módulo implementa as classes e a lógica de um sistema bancário simples,
+conforme especificado no desafio de código da plataforma DIO.
+
+O sistema permite cadastro de clientes, criação de contas e operações de saque e depósito.
+"""
 from abc import ABC, abstractmethod
 from datetime import datetime
 
@@ -13,18 +20,22 @@ def formatar_data_pt(dt):
 #CLASSES UML
 
 class Historico:
+    """Armazena o histórico de transações de uma conta."""
     def __init__(self):
         self.transacoes = []
 
     def adicionar_transacao(self, transacao):
+        """Adiciona uma nova transação ao histórico."""
         self.transacoes.append(transacao)
 
 class Transacao(ABC):
+    """Classe abstrata que representa uma transação bancária."""
     @abstractmethod
-    def registrar(self, conta):
+    def registrar(self, conta) -> bool:
         pass
 
 class Deposito(Transacao):
+    """Representa uma operação de depósito."""
     def __init__(self, valor):
         self.valor = valor
 
@@ -40,6 +51,7 @@ class Deposito(Transacao):
         return False
 
 class Saque(Transacao):
+    """Representa uma operação de saque."""
     def __init__(self, valor):
         self.valor = valor
 
@@ -65,6 +77,7 @@ class Saque(Transacao):
         return False
 
 class Conta(ABC):
+    """Classe base para contas bancárias."""
     def __init__(self, numero, cliente):
         self.saldo = 0.0
         self.numero = numero
@@ -77,12 +90,14 @@ class Conta(ABC):
         return ContaCorrente(numero, cliente)
 
 class ContaCorrente(Conta):
+    """Implementação de Conta Corrente com limites de saque."""
     def __init__(self, numero, cliente, limite=500.0, limite_saques=3):
         super().__init__(numero, cliente)
         self.limite = limite
         self.limite_saques = limite_saques
 
 class Cliente(ABC):
+    """Representa um cliente do banco."""
     def __init__(self, endereco):
         self.endereco = endereco
         self.contas = []
@@ -94,6 +109,7 @@ class Cliente(ABC):
         self.contas.append(conta)
 
 class PessoaFisica(Cliente):
+    """Cliente pessoa física."""
     def __init__(self, cpf, nome, data_nascimento, endereco):
         super().__init__(endereco)
         self.cpf = cpf
