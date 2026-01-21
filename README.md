@@ -56,6 +56,7 @@ python-banking-system/
 ├── fesisbank_users.db   # SQLite Database file (Auto-generated)
 ├── requirements.txt     # Project dependencies
 └── README.md            # Project documentation
+```
 ## 👤 Autor
 
 Felipe da Silva Spinola
